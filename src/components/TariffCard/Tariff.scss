@@ -1,0 +1,52 @@
+.tariff-card {
+    $backgroundColorOne: #f8f8f8ef;
+    $color: white;
+    $colorTwo: grey;
+
+    color:$color;
+    width: 200px;
+    &:first-of-type {
+        background-color: #2cc1d5;
+        div:first-of-type {
+            background-color: #329aa8;
+        }
+    }
+    &:nth-of-type(2) {
+        background-color: #24ae8d;
+        div:first-of-type {
+            background-color: #309680;
+        }
+    }
+    &:nth-of-type(3) {
+        background-color:  rgb(250, 134, 105);
+        div:first-of-type {
+            background-color: #f46a5f;
+        }
+    }
+    &:nth-of-type(4) {
+        background-color: #000000;
+        div:first-of-type {
+            background-color: #252525;
+        }
+    }
+    &__name,
+    &__price{
+        padding: 15px;
+    }
+    &__speed{
+        background-color: $color;
+        padding: 15px;
+        color:$colorTwo;
+    }
+    &__description{
+        background-color: $backgroundColorOne;
+        padding: 15px;
+        color:$colorTwo;
+    }
+    &__price span{
+        font-size:40px
+    }
+}
+.selected{
+    transform: scale(1.1, 1.1);
+}
