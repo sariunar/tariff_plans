@@ -1,13 +1,29 @@
 import './Tariff.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
 const Tariff = ({ name, price, speed, description }) => {
     const [selected, setSelected] = useState(false);
+    const tarifRef = useRef(null);
+
     const handleClick = () => {
         setSelected(!selected);
-        //как сделать, чтобы тариф возвращался в изначальную форму не только при клику по ней же, но и при клике за ее пределами 
     }
+
+    const handleClickOutside = (e) => {
+        if (tarifRef.current && !tarifRef.current.contains(e.target)) {
+            setSelected(false);
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        }
+    }, []);
+
     return (
-        <div className={'tariff-card ' + (selected ? "selected" : "")} onClick={handleClick}>
+        <div ref={tarifRef} className={'tariff-card ' + (selected ? "selected" : "")} onClick={handleClick}>
             <div className='tariff-card__name'>{name}</div>
             <div className='tariff-card__price'><span>{price}</span> руб/мес</div>
             <div className='tariff-card__speed'>{speed}</div>
