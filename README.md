@@ -1,3 +1,11 @@
+## List of Internet tarif plans
+
+React study project:
+    ✓   Card-components;
+    ✓   Conditional Rendering;
+    ✓   Possibility to pick a card by clicking on it.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
