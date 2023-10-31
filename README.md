@@ -1,9 +1,12 @@
 ## List of Internet tarif plans
 
-React study project:
+React project:
+
     ✓   Card-components;
     ✓   Conditional Rendering;
     ✓   Possibility to pick a card by clicking on it.
+
+![image](https://github.com/sariunar/tariff_plans/assets/90380387/00109284-95cb-44ee-a4d3-8e3a80481dc2)
 
 
 # Getting Started with Create React App
